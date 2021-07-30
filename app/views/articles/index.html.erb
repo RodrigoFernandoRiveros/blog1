@@ -16,9 +16,9 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.body %></td>
-        <td><%= link_to ' Mostrar ', article %></td>
-        <td><%= link_to ' Editar ', edit_article_path(article) %></td>
-        <td><%= link_to ' Eliminar ', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', article %></td>
+        <td><%= link_to 'Editar', edit_article_path(article) %></td>
+        <td><%= link_to 'Eliminar', article, method: :delete, data: { confirm: 'Está seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

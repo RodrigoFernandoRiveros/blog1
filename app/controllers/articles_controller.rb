@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to @article, notice: 'Article was successfully created.'
+      redirect_to @article, notice: 'Artículo fue creado con éxito.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   def update
     if @article.update(article_params)
-      redirect_to @article, notice: 'Article was successfully updated.'
+      redirect_to @article, notice: 'Artículo fue actualizado con éxito.'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   def destroy
     @article.destroy
-    redirect_to root_url, notice: 'Article was successfully destroyed.'
+    redirect_to root_url, notice: 'Artículo fue eliminado con éxito.'
   end
 
   private
