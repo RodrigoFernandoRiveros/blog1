@@ -19,11 +19,17 @@
         <td><%= link_to 'Mostrar', article %></td>
         <td><%= link_to 'Editar', edit_article_path(article) %></td>
         <td><%= link_to 'Eliminar', article, method: :delete, data: { confirm: 'Está seguro?' } %></td>
-      </tr>
+        </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<!-- app/views/articles/index.html.erb -->
+ <!-- <%= cl_image_tag("peh5gcku7z6dqlqe84tn", width: 400, height: 300, crop: :fill) %>-->
+<br>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @article.photo.key, height: 300, crop: :fill %>')">
+  Cool article
+</div>
 
 <%= link_to 'Nuevo Artículo', new_article_path %>

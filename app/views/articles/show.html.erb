@@ -9,6 +9,7 @@
   <strong>Descripción:</strong>
   <%= @article.body %>
 </p>
+<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
 
 <%= link_to ' Editar ', edit_article_path(@article) %> |
 <%= link_to ' Regresar', root_path %>
